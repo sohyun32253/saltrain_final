@@ -4,7 +4,7 @@
         <nav>
             <button type="button" class="all_menu" @click="openMenu"><router-link to="#none"><img src="@/assets/menu_w300.svg" alt="전체메뉴"></router-link></button>
             <div class="gnb">
-                <h1><router-link to="Main"><img src="@/assets/logo_white.svg" alt="saltrain"></router-link></h1>
+                <h1><router-link to="/"><img src="@/assets/logo_white.svg" alt="saltrain"></router-link></h1>
                 <ul>
                     <li><router-link to="Products">PRODUCTS</router-link></li>
                     <li><router-link to="Store">STORE</router-link></li>
@@ -22,6 +22,7 @@
             </div>
         </nav>
     </v-app-bar>
+    
     <button @click="openPopup">팝업 열기</button>
     <!-- mobile ver sub menu -->
     <!-- Popup Modal -->
@@ -85,6 +86,7 @@
         </div>  
     </div>
 </div>
+
 </template>
     
 <script setup>
@@ -208,6 +210,7 @@ onUnmounted(() => {
 
 #header{
     width: 100%;
+    height: 80px;
     background: #000;
     margin: 0;
     padding: 0;
@@ -267,7 +270,7 @@ nav{
 }
 
 .util_menu button{
-  margin-right: 16px;
+  margin-right: 10px;
 }
 
 .util_menu button:hover{
@@ -416,7 +419,7 @@ nav{
         width: 480px;
         height: 932px;
         position: absolute;
-        top: 0;
+        top: 50px;
         z-index: 999;
         height: auto;
     }

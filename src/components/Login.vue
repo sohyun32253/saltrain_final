@@ -1,4 +1,5 @@
 <template>
+    <v-app>
     <div id="login">
         <div class="login_cont">
             <p class="dc_txt">SALTRAIN</p>
@@ -17,9 +18,9 @@
             </form>
 
             <div class="service_wrap">
-                <p class="search_id"><router-link to="https://saltrain.kr/member/id/find_id.html">아이디찾기</router-link></p>
-                <p class="search_pwd"><router-link to="https://saltrain.kr/member/passwd/find_passwd_info.html">비밀번호찾기</router-link></p>
-                <p class="join_us"><router-link to="https://saltrain.kr/member/router-linkgreement.html">회원가입</router-link></p>
+                <p class="search_id"><router-link to="#none">아이디찾기</router-link></p>
+                <p class="search_pwd"><router-link to="#none">비밀번호찾기</router-link></p>
+                <p class="join_us"><router-link to="#none">회원가입</router-link></p>
             </div>
 
             <router-link to="#none">
@@ -45,8 +46,8 @@
                 </div>
             </router-link>
     </div>
-    
     </div>
+</v-app>
 </template>
 
 <script>
@@ -58,6 +59,7 @@ export default {
     return {};
   },
   mounted() {
+    /*
     this.naverLogin = new window.naver_id_login(
       clientId,
       "http://localhost:5173"  // 개발자센터에서 등록한 Callback URL
@@ -67,7 +69,7 @@ export default {
     this.naverLogin.setDomain("http://localhost:5173/login");
     this.naverLogin.setState(state);
     this.naverLogin.setPopup(); // 팝업 여부
-    this.naverLogin.init_naver_id_login();
+    this.naverLogin.init_naver_id_login();*/
   },
 };
 
@@ -77,6 +79,8 @@ export default {
 <style>
     #login{
         background: #fff;
+        padding: 5rem 0;
+        box-sizing: border-box;
     }
     #login a{
         color: #666666;
@@ -97,7 +101,7 @@ export default {
         width: 427px;
         margin: 0 auto;
         text-align: center;
-        padding: 5rem 0;
+       /* padding: 5rem 0; */
     }
 
     #login legend,
