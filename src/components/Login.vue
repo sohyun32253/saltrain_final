@@ -17,33 +17,33 @@
             </form>
 
             <div class="service_wrap">
-                <p class="search_id"><a href="https://saltrain.kr/member/id/find_id.html">아이디찾기</a></p>
-                <p class="search_pwd"><a href="https://saltrain.kr/member/passwd/find_passwd_info.html">비밀번호찾기</a></p>
-                <p class="join_us"><a href="https://saltrain.kr/member/agreement.html">회원가입</a></p>
+                <p class="search_id"><router-link to="https://saltrain.kr/member/id/find_id.html">아이디찾기</router-link></p>
+                <p class="search_pwd"><router-link to="https://saltrain.kr/member/passwd/find_passwd_info.html">비밀번호찾기</router-link></p>
+                <p class="join_us"><router-link to="https://saltrain.kr/member/router-linkgreement.html">회원가입</router-link></p>
             </div>
 
-            <a href="#none">
+            <router-link to="#none">
                 <div class="login_ver">
                     <img src="@/assets/naver_logo.png">
                     <p>네이버로 로그인</p>
                 </div>
-            </a>
+            </router-link>
 
             <div id="naver_id_login"></div>
 
-            <a href="#none">
+            <router-link to="#none">
                 <div class="login_ver">
                     <img src="@/assets/google_logo.png">
                     <p>구글로 로그인</p>
                 </div>
-            </a>
+            </router-link>
 
-            <a href="#none">
+            <router-link to="#none">
                 <div class="login_ver">
                     <img src="@/assets/kakao_logo.png">
                     <p>카카오로 로그인</p>
                 </div>
-            </a>
+            </router-link>
     </div>
     
     </div>
