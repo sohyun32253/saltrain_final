@@ -1,7 +1,6 @@
 <template>
     <div id="about">
         <v-app>
-        <Header></Header>
         <v-main class="v_main">
             <!-- brand goal -->
             <v-container class="about_goal">
@@ -97,21 +96,16 @@
                 </p>
             </div>
         </v-main>
-        <Footer></Footer>
     </v-app>
     </div>
 </template>
 
 <script>
- import Header from '@/components/Header.vue';
-  import Footer from '@/components/Footer.vue';
+ 
 
 
   export default {
-    components: {
-      Header,
-      Footer
-    }
+   
   }
   document.addEventListener("DOMContentLoaded", function() {
     // Intersection Observer for .about_goal

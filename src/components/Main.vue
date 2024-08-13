@@ -293,7 +293,6 @@ let productsTl = gsap.timeline({
         end: "bottom bottom",
         pin:true,
         scrub:true,
-        markers:true
     }
 })
 productsSlider.innerHTML += (productsSlider.innerHTML)*2
