@@ -239,10 +239,10 @@
     margin-bottom: var(--medium-bottom);
 }
 
-.products_txt a {
+.to_pd {
+    text-align: center;
     display: block;
-    width: 120px;
-    padding: 8px;
+    padding: 8px 40px;
     box-sizing: border-box;
     border: 1px solid var(--white-color);
     font-family: "urbane-condensed", sans-serif;
@@ -251,8 +251,11 @@
     color: var(--white-color);
 }
 .products_slider{
+    width: 100vh;
+    margin: 0 auto;
     margin-bottom: var(--large-bottom);
 }
+
 
 .products_slider .slide_cont a{
     width:400px;
