@@ -27,7 +27,6 @@
         {id: 24, name: 'WKNDRS'}
     ]
 
-<<<<<<< HEAD
     const modules = import.meta.glob("../assets/collection_read_images/*.png", { eager: true });
 
     const images = [];
@@ -39,15 +38,6 @@
 
         console.log(images[i]);
         i++;
-=======
-    const modules = import.meta.glob("../assets/collection_images/*.jpg", { eager: true });
-
-    const images = [];
-
-    //이미지 및 링크 설정
-    for (const img in modules) {
-        images.push(modules[img].default);
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
     }
 
     var now_link = window.location.search;
@@ -55,25 +45,12 @@
     const params = new URLSearchParams(now_link);
 
     const read_number = params.get('read_number');
-<<<<<<< HEAD
 </script>
 
 <template>
     <div class="collection_read_wrap">
         <h2 class="collection_name">{{collection_item_list[read_number].name}}</h2>
         <div class="read_box">
-=======
-    function go_back(){
-        this.$router.go(-1);
-    }
-</script>
-
-<template>
-    <div>
-        <h2>{{collection_item_list[read_number].name}}</h2>
-        <div class="read_box">
-            <!-- 임시 이미지 -->
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
             <img 
             :src="images[read_number]"
             alt=""
@@ -88,7 +65,6 @@
 </template>
 
 <style scoped>
-<<<<<<< HEAD
     .collection_read_wrap{
         margin: 80px auto;
     }
@@ -96,8 +72,6 @@
         text-align: center;
         border-bottom: 2px solid black;
     }
-=======
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
     .read_box{
         margin: 0 auto;
         max-width: 1280px;

@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div class="faq_wrap">
     <div class="faq_qna">
       <p class="faq menu_check">
@@ -8,13 +7,6 @@
       <p class="qna menu_uncheck">
         <a href="/qna">1:1 문의</a>
       </p>
-=======
-  <div id="QnA">
-    <h2>QnA</h2>
-    <div class="faq_qna">
-      <p class="faq">자주 묻는 질문</p>
-      <p class="qna">1:1 문의</p>
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
     </div>
     <div class="faq_box">
       <v-expansion-panels
@@ -22,7 +14,6 @@
         multiple
       >
         <v-expansion-panel
-<<<<<<< HEAD
           text="본 제품은 매일 꾸준한 사용으로 충치예방 치태제거 등의 효과로 구강질환 등을 예방하는 제품입니다. 다만 치료 목적이 아니므로, 구강질환 치료는 전문가나 의사와 상의 바랍니다."
           title="구강 질환에 도움이 되나요?"
           value="구강 질환에 도움이 되나요?"
@@ -61,24 +52,6 @@
           text="덴티스테는 무불소 치약과 불소 치약이 있습니다. 충치가 잘 생기거나, 불소 함유 제품을 찾으시는 분은 “솔트레인 센서티브 치약”(불소 1000ppm함유)을 권장합니다. 무불소 치약 또한 충치 예방 및 구취제거에 효과적인 제품으로 인체적용시험을 완료하였습니다."
           title="제품 중 불소 치약이 있나요?"
           value="제품 중 불소 치약이 있나요?"
-=======
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          title="Foo"
-          value="foo"
-        ></v-expansion-panel>
-
-        <v-expansion-panel
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          title="Bar"
-          value="bar"
-        ></v-expansion-panel>
-
-        <v-expansion-panel
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          title="Car"
-          value="car"
-        
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
         >
         </v-expansion-panel>
       </v-expansion-panels>
@@ -86,7 +59,6 @@
   </div>
 </template>
 
-<<<<<<< HEAD
 <style scoped>
 
 .custom-text{
@@ -101,13 +73,6 @@
   .faq_box{
     width: 80%;
     margin: 80px auto 0;
-=======
-<style>
-
-  .faq_box{
-    width: 80%;
-    margin: 0 auto;
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
   }
 
   .faq_qna{
@@ -121,7 +86,6 @@
     border-radius: 24px;
     font-weight: bold;
   }
-<<<<<<< HEAD
   .menu_check a{
     color: #1a51e6;
     font-size: 20px;
@@ -130,8 +94,6 @@
     color: #b0b0b0;
     font-size: 20px;
   }
-=======
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 
 </style>
 
