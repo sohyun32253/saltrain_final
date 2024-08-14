@@ -44,7 +44,11 @@
 </script>
 
 <template>
+<<<<<<< HEAD
+    <div class="collection_wrap">
+=======
     <div id="collection">
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
         <ul class="collection_box">
             <li
             v-for="(img, index) of images"
@@ -61,10 +65,21 @@
 
 <style scoped>
 
+<<<<<<< HEAD
+
+    .collection_wrap{
+        margin: 80px auto;
+    }
+=======
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
     img{
         width: 100%;
     }
     a{
+<<<<<<< HEAD
+        width: 100%;
+=======
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
         color: black;
     }
     a:hover{

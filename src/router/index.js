@@ -11,8 +11,16 @@ import About from '@/components/About.vue'
 import Community from '@/components/Community.vue'
 import Notice from '@/components/Notice.vue'
 import Login from '@/components/Login.vue'
+<<<<<<< HEAD
+import Detail from '@/components/Detail.vue'
+import QnA from '@/components/QnA.vue'
+import Membership from '@/components/Membership.vue'
+import Event from '@/components/Event.vue'
+import Store_online from '@/components/Store_online.vue'
+=======
 import Join from '@/components/Join.vue'
 import Detail from '@/components/Detail.vue'
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 
 
 const router = createRouter({
@@ -79,15 +87,41 @@ const router = createRouter({
       component: Login
     },
     {
+<<<<<<< HEAD
+=======
       path: '/join',
       name: 'join',
       component: Join
     },
     {
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
       path: '/detail',
       name: 'detail',
       component: Detail
     },
+<<<<<<< HEAD
+    {
+      path: '/qna',
+      name: 'qna',
+      component: QnA
+    },
+    {
+      path: '/membership',
+      name: 'membership',
+      component: Membership
+    },
+    {
+      path: '/event',
+      name: 'event',
+      component: Event
+    },
+    {
+      path: '/store_online',
+      name: 'store_online',
+      component: Store_online
+    },
+=======
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
     
   ]
 })
