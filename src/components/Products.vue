@@ -6,7 +6,6 @@
                 <v-row>
                     <v-col cols="12" lg="6">
                         <ul class="products_snb">
-<<<<<<< HEAD
                             <li><a href="#none">COOL VACATION</a></li>
                             <li><a href="#none">ALL</a></li>
                             <li><a href="#none">RED LINE</a></li>
@@ -16,17 +15,6 @@
                             <li><a href="#none">FRAGRANCE</a></li>
                             <li><a href="#none">SALT &amp; GOODS</a></li>
                             <li><a href="#none">SPECIAL</a></li>
-=======
-                            <li><a @click.prevent="">COOL VACATION</a></li>
-                            <li><a @click.prevent="">ALL</a></li>
-                            <li><a @click.prevent="">RED LINE</a></li>
-                            <li><a @click.prevent="">GIFT SET</a></li>
-                            <li><a @click.prevent="">DENTAL</a></li>
-                            <li><a @click.prevent="">LIFESTYLE</a></li>
-                            <li><a @click.prevent="">FRAGRANCE</a></li>
-                            <li><a @click.prevent="">SALT &amp; GOODS</a></li>
-                            <li><a @click.prevent="">SPECIAL</a></li>
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
                         </ul>
                     </v-col>
                 </v-row>
@@ -35,11 +23,7 @@
         </v-container>
         <v-container class="products_list">
             <v-row class="list_order d-flex justify-space-between">
-<<<<<<< HEAD
                 <p>상품수 itemes</p>
-=======
-                <p>{{products.length}} itemes</p>
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
                 <ul class="list_sort d-flex child-flex">
                     <li><a href="#none">신상품</a></li>
                     <li><a href="#none">상품명</a></li>
@@ -56,11 +40,7 @@
                         <img :src="`/products/${item.pd_pic}`" cover/>
                         <div class="products_text">
                             <h4 class="item_title">{{item.name}}</h4>
-<<<<<<< HEAD
                             <div class="price d-flex">
-=======
-                            <div class="price">
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
                                 <p><span class="r_price"
                                 v-if="item.regular_price">{{item.regular_price}}원</span>
                                 </p>
@@ -80,7 +60,6 @@
     </v-app>
 </template>
 <style scoped>
-<<<<<<< HEAD
 /* products snb */
 .products_sub_menu{
     position: relative;
@@ -187,9 +166,6 @@ margin-left: 14px;
     font-size: var(--h3-font-size);
     color:var(--b900-color);
 }
-=======
-@import url('@/assets/css/products.css');
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 </style>
 <script>
 import productData from "@/datasources/products-data";
@@ -197,10 +173,6 @@ export default{
     name:'App',
     data:()=>{
         return {
-<<<<<<< HEAD
-=======
-            currentTab: 0,
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
             products : productData.productsList,
         }
     }
