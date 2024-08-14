@@ -124,11 +124,9 @@
                 <v-container class="products" fluid>
                                 <div class="products_txt">
                                     <h2>Saltrain Products</h2>
-                                    <a href="#none">more<span>+</span></a>
+                                    <router-link to="Products"><span class="to_pd">more</span></router-link>
                                 </div>
                             <div class="products_list">
-                                <button class="slider-prev">Previous</button>
-                                <button class="slider-next">Next</button>
                                 <div class="products_slider d-flex">
                                     <div class="slide_cont">
                                         <a href="#none" class="cont_ref">
@@ -175,19 +173,6 @@
 </template>
 <style scoped>  
 @import url('@/assets/css/main.css');
-
-.slider-prev {
-  position:absolute;
-  z-index:1;
-  top:50%;
-  left:4%;
-}
-.slider-next {
-  position:absolute;
-  z-index:1;
-  top:50%;
-  right:4%;
-}
 </style>
 <script>
 /*gsap 추가*/
@@ -195,13 +180,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 gsap.registerPlugin(ScrollTrigger,ScrollToPlugin)
 
 /* lenis추가 */
-const lenis = new Lenis({
-lerp: 0.07
-});
+const lenis = new Lenis({lerp: 0.07});
 lenis.on('scroll', ScrollTrigger.update);
-gsap.ticker.add((time)=>{
-  lenis.raf(time * 1000)
-})
+gsap.ticker.add((time)=>{lenis.raf(time * 1000)})
 
 /*brand*/
 var panels = gsap.utils.toArray(".panel");
@@ -268,7 +249,6 @@ let collaboTl = gsap.timeline({
             trigger:collaboSection,
             pin: true,
             scrub: true,
-            start: "top top",
             end:"+=199%",
         }
     })
@@ -283,8 +263,8 @@ collaboTl.to(collaboSlider,{
     }
     })
 
-// 제품 페이지
-let productsSection = document.querySelector(".products")
+/* 제품 페이지 애니메이션 */
+    let productsSection = document.querySelector(".products")
 let productsSlider = document.querySelector(".products_slider")
 let productsTl = gsap.timeline({
     scrollTrigger:{
@@ -322,6 +302,7 @@ gsap.to(products, {
 };
 
 setAnimation();
+
 // 메인 슬라이더 로고 - 기묘함
 let sliderWrap = gsap.utils.toArray(".slider_wrap");
 gsap
@@ -339,6 +320,6 @@ gsap
     transformOrigin: "center center",
     ease: "power2.inOut",
     })
-
 });
+
 </script>
