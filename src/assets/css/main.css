@@ -239,10 +239,17 @@
     margin-bottom: var(--medium-bottom);
 }
 
+<<<<<<< HEAD
+.products_txt a {
+    display: block;
+    width: 120px;
+    padding: 8px;
+=======
 .to_pd {
     text-align: center;
     display: block;
     padding: 8px 40px;
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
     box-sizing: border-box;
     border: 1px solid var(--white-color);
     font-family: "urbane-condensed", sans-serif;
@@ -251,12 +258,18 @@
     color: var(--white-color);
 }
 .products_slider{
+<<<<<<< HEAD
+    margin-bottom: var(--large-bottom);
+}
+
+=======
     width: 100vh;
     margin: 0 auto;
     margin-bottom: var(--large-bottom);
 }
 
 
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 .products_slider .slide_cont a{
     width:400px;
     display: block;
