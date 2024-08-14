@@ -11,6 +11,7 @@ import About from '@/components/About.vue'
 import Community from '@/components/Community.vue'
 import Notice from '@/components/Notice.vue'
 import Login from '@/components/Login.vue'
+import Join from '@/components/Join.vue'
 import Detail from '@/components/Detail.vue'
 import QnA from '@/components/QnA.vue'
 import Membership from '@/components/Membership.vue'
@@ -80,6 +81,11 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/join',
+      name: 'join',
+      component: Join
     },
     {
       path: '/detail',
