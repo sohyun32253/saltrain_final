@@ -124,17 +124,11 @@
                 <v-container class="products" fluid>
                                 <div class="products_txt">
                                     <h2>Saltrain Products</h2>
-<<<<<<< HEAD
                                     <a href="#none">more<span>+</span></a>
                                 </div>
                             <div class="products_list">
                                 <button class="slider-prev">Previous</button>
                                 <button class="slider-next">Next</button>
-=======
-                                    <router-link to="Products"><span class="to_pd">more</span></router-link>
-                                </div>
-                            <div class="products_list">
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
                                 <div class="products_slider d-flex">
                                     <div class="slide_cont">
                                         <a href="#none" class="cont_ref">
@@ -181,7 +175,6 @@
 </template>
 <style scoped>  
 @import url('@/assets/css/main.css');
-<<<<<<< HEAD
 
 .slider-prev {
   position:absolute;
@@ -195,8 +188,6 @@
   top:50%;
   right:4%;
 }
-=======
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 </style>
 <script>
 /*gsap 추가*/
@@ -204,7 +195,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 gsap.registerPlugin(ScrollTrigger,ScrollToPlugin)
 
 /* lenis추가 */
-<<<<<<< HEAD
 const lenis = new Lenis({
 lerp: 0.07
 });
@@ -212,11 +202,6 @@ lenis.on('scroll', ScrollTrigger.update);
 gsap.ticker.add((time)=>{
   lenis.raf(time * 1000)
 })
-=======
-const lenis = new Lenis({lerp: 0.07});
-lenis.on('scroll', ScrollTrigger.update);
-gsap.ticker.add((time)=>{lenis.raf(time * 1000)})
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 
 /*brand*/
 var panels = gsap.utils.toArray(".panel");
@@ -283,10 +268,7 @@ let collaboTl = gsap.timeline({
             trigger:collaboSection,
             pin: true,
             scrub: true,
-<<<<<<< HEAD
             start: "top top",
-=======
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
             end:"+=199%",
         }
     })
@@ -301,13 +283,8 @@ collaboTl.to(collaboSlider,{
     }
     })
 
-<<<<<<< HEAD
 // 제품 페이지
 let productsSection = document.querySelector(".products")
-=======
-/* 제품 페이지 애니메이션 */
-    let productsSection = document.querySelector(".products")
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 let productsSlider = document.querySelector(".products_slider")
 let productsTl = gsap.timeline({
     scrollTrigger:{
@@ -345,10 +322,6 @@ gsap.to(products, {
 };
 
 setAnimation();
-<<<<<<< HEAD
-=======
-
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 // 메인 슬라이더 로고 - 기묘함
 let sliderWrap = gsap.utils.toArray(".slider_wrap");
 gsap
@@ -366,11 +339,6 @@ gsap
     transformOrigin: "center center",
     ease: "power2.inOut",
     })
-<<<<<<< HEAD
 
 });
-=======
-});
-
->>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 </script>
