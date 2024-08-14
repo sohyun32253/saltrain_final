@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div id="notice_wrap">
     <div class="notice-list">
       <ul>
@@ -26,11 +27,70 @@
   </div>
 </template>
 
+=======
+  <div id="Notice">
+    <h2>Notice</h2>
+    <v-row>
+      <v-col cols="12">
+        <v-card class="mb-4">
+          <v-card-title>
+            <span class="headline">공지사항</span>
+          </v-card-title>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12">
+        <v-list>
+          <v-list-item-group v-for="(notice, index) in notices" :key="index" class="mb-2">
+            <v-list-item class="border-bottom">
+              <v-list-item-content>
+                <v-list-item-title class="headline">{{ notice.title }}</v-list-item-title>
+                <v-list-item-subtitle>{{ notice.date }}</v-list-item-subtitle>
+                <v-list-item-subtitle class="mt-2">{{ notice.content }}</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+      </v-col>
+    </v-row>
+  </div>
+</template>
+
+<style>
+
+  .faq_box{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .faq_qna{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+  .faq_qna p{
+    padding: 12px 32px;
+    border: 2px solid #b0b0b0;
+    border-radius: 24px;
+    font-weight: bold;
+  }
+  .headline {
+    font-weight: bold;
+  }
+  .border-bottom {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 16px;
+}
+
+</style>
+
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 <script>
 export default {
   data() {
     return {
       notices: [
+<<<<<<< HEAD
         { number: 1, title: '배송안내', date: '2024-08-11', details: '평일 15시 이전 결제 완료 건에 한해 당일 출고됩니다. (공휴일이나 주말은 배송기간에 포함되지 않습니다.), 평균 배송일은 1~3일이며, 품절로 인한 상품 취소는 연락을 드립니다. 제주도 및 도서 산간 지역은 추가 운임이 부과될 수 있습니다.' },
         { number: 2, title: '반품 및 교환 안내', date: '2024-08-07', details: '단순 변심 반품 및 교환은 상품 수령 후 7일 이내에 요청 가능합니다. 상품을 사용하셨거나 상품이 훼손된 경우 반품/교환이 어려울 수 있습니다. 이미 출고된 제품에 대한 주문 취소일 경우, 고객님께서 왕복 배송비를 부담하셔야 합니다.' },
         { number: 3, title: '솔트레인 공식스토어 멤버십 혜택', date: '2024-07-10', details: '신규 회원에게 드리는 스페셜 웰컴 혜택! 월컴 10%할인쿠폰 신규 3000원 적립, 첫 구매감사 5% 할인쿠폰 등 다양한 혜택이 있습니다.' },
@@ -88,3 +148,13 @@ export default {
   color: #666;
 }
 </style>
+=======
+        { title: '공지사항 1', date: '2024-08-01', content: '공지사항 내용 1입니다.' },
+        { title: '공지사항 2', date: '2024-08-05', content: '공지사항 내용 2입니다.' },
+        { title: '공지사항 3', date: '2024-08-10', content: '공지사항 내용 3입니다.' },
+      ],
+    };
+  },
+};
+</script>
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8

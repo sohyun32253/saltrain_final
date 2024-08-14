@@ -2,6 +2,7 @@
 <div id="header">
     <v-app-bar app color="#000" height="80px">
         <nav>
+<<<<<<< HEAD
             <button type="button" class="all_menu" @click="openMenu"><a href="#none"><img src="@/assets/menu_w300.svg" alt="전체메뉴"></a></button>
             <div class="gnb">
                 <h1><a href="/"><img src="@/assets/logo_white.svg" alt="saltrain"></a></h1>
@@ -18,10 +19,32 @@
                     <button type="button" class="search_menu" @click="openPopup"><a href="#none"><img src="@/assets/search_w300.svg" alt="검색"></a></button>
                     <button type="button" class="login_menu"><a href="Login"><img src="@/assets/person_w300.svg" alt="로그인"></a></button>
                     <button type="button" class="cart_menu"><a href="#none"><img src="@/assets/shopping_bag_w300.svg" alt="장바구니"></a></button>
+=======
+            <button type="button" class="all_menu" @click="openMenu"><router-link to="#none"><img src="@/assets/menu_w300.svg" alt="전체메뉴"></router-link></button>
+            <div class="gnb">
+                <h1><router-link to="/"><img src="@/assets/logo_white.svg" alt="saltrain"></router-link></h1>
+                <ul>
+                    <li><router-link to="Products">PRODUCTS</router-link></li>
+                    <li><router-link to="Store">STORE</router-link></li>
+                    <li><router-link to="Collection">COLLECTION</router-link></li>
+                    <li><router-link to="About">ABOUT</router-link></li>
+                    <li><router-link to="Community">COMMUNITY</router-link></li>
+                </ul>
+
+                <div class="util_menu">
+                    <button type="button" class="language_menu"><router-link to="#none"><img src="@/assets/language_w300.svg" alt="언어"></router-link></button>
+                    <button type="button" class="search_menu" @click="openPopup"><router-link to="#none"><img src="@/assets/search_w300.svg" alt="검색"></router-link></button>
+                    <button type="button" class="login_menu"><router-link to="Login"><img src="@/assets/person_w300.svg" alt="로그인"></router-link></button>
+                    <button type="button" class="cart_menu"><router-link to="#none"><img src="@/assets/shopping_bag_w300.svg" alt="장바구니"></router-link></button>
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
                 </div>
             </div>
         </nav>
     </v-app-bar>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
     <button @click="openPopup">팝업 열기</button>
     <!-- mobile ver sub menu -->
     <!-- Popup Modal -->
@@ -36,6 +59,7 @@
 
 
     <div class="sub_menu">
+<<<<<<< HEAD
         <button type="button" class="close_menu" @click="closeMenu"><a href="#none"><img src="@/assets/close.svg" alt="서브 메뉴 닫기"></a></button>
        
         <ul>
@@ -75,10 +99,52 @@
                     <li><a href="/event">Event</a></li>
                     <li><a href="/qna">Q&#38;A</a></li>
                     <li><a href="/membership">Menbership</a></li>
+=======
+        <button type="button" class="close_menu" @click="closeMenu"><router-link to="#none"><img src="@/assets/close.svg" alt="서브 메뉴 닫기"></router-link></button>
+       
+        <ul>
+            <li>
+                <router-link to="#none" @click.prevent="menuToggle('products')">PRODUCTS
+                    <img class="open_menu" 
+                    :src="menuIcons.products" alt="메뉴 펼치기"></router-link>
+                <ul :class="{'hidden_menu': !menuStates.products, 'visible_menu': menuStates.products}">
+                    <li><router-link to="#none">COOL VACATION</router-link></li>
+                    <li><router-link to="#none">All</router-link></li>
+                    <li><router-link to="#none">Red Line</router-link></li>
+                    <li><router-link to="#none">Gift Set</router-link></li>
+                    <li><router-link to="#none">Dental</router-link></li>
+                    <li><router-link to="#none">LifeStyle</router-link></li>
+                    <li><router-link to="#none">Fragrance</router-link></li>
+                    <li><router-link to="#none">Salt&#38;Goods</router-link></li>
+                    <li><router-link to="#none">Special</router-link></li>
+                </ul>
+            </li>
+            <li>
+                <router-link to="#none" @click.prevent="menuToggle('store')">STORE 
+                    <img class="open_menu" 
+                    :src="menuIcons.store" alt="메뉴 펼치기"></router-link>
+                <ul :class="{'hidden_menu': !menuStates.store, 'visible_menu': menuStates.store}">
+                    <li><router-link to="#none">Offline</router-link></li>
+                    <li><router-link to="#none">Online</router-link></li>
+                </ul>
+            </li>
+            <li><router-link to="Collection">COLLECTION</router-link></li>
+            <li><router-link to="About">ABOUT</router-link></li>
+            <li>
+                <router-link to="#none" @click.prevent="menuToggle('community')">COMMUNITY 
+                    <img class="open_menu"
+                    :src="menuIcons.community" alt="메뉴 펼치기"></router-link>
+                <ul :class="{'hidden_menu': !menuStates.community, 'visible_menu': menuStates.community}">
+                    <li><router-link to="#none">Notice</router-link></li>
+                    <li><router-link to="#none">Event</router-link></li>
+                    <li><router-link to="#none">Q&#38;A</router-link></li>
+                    <li><router-link to="#none">Menbership</router-link></li>
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
                 </ul>
             </li>
         </ul> 
         <div class="utill_menu_mobile">
+<<<<<<< HEAD
             <button type="button" class="login_menu"><a href="Login"><img src="@/assets/person_black.svg" alt="로그인"></a></button>
             <button type="button" class="cart_menu"><a href="#none"><img src="@/assets/shopping_bag_black.svg" alt="장바구니"></a></button>
             <button type="button" class="language_menu"><a href="#none"><img src="@/assets/language_black.svg" alt="언어"></a></button>
@@ -92,6 +158,15 @@
         </button>
     </div>
 </div>
+=======
+            <button type="button" class="login_menu"><router-link to="Login"><img src="@/assets/person_black.svg" alt="로그인"></router-link></button>
+            <button type="button" class="cart_menu"><router-link to="#none"><img src="@/assets/shopping_bag_black.svg" alt="장바구니"></router-link></button>
+            <button type="button" class="language_menu"><router-link to="#none"><img src="@/assets/language_black.svg" alt="언어"></router-link></button>
+        </div>  
+    </div>
+</div>
+
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 </template>
     
 <script setup>
@@ -201,6 +276,7 @@ onUnmounted(() => {
   
 </script>
 
+<<<<<<< HEAD
 <!-- 탑버튼 -->
 <script>
   export default {
@@ -225,6 +301,9 @@ onUnmounted(() => {
 
 <style scoped>
 
+=======
+<style scoped>
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 .v-main{
   height: 0;
 }
@@ -238,6 +317,10 @@ onUnmounted(() => {
 
 #header{
     width: 100%;
+<<<<<<< HEAD
+=======
+    height: 80px;
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
     background: #000;
     margin: 0;
     padding: 0;
@@ -297,7 +380,11 @@ nav{
 }
 
 .util_menu button{
+<<<<<<< HEAD
   margin-right: 16px;
+=======
+  margin-right: 10px;
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
 }
 
 .util_menu button:hover{
@@ -399,6 +486,7 @@ nav{
   }
 
 
+<<<<<<< HEAD
 /* 탑버튼 */
 .top_btn{
     position: fixed;
@@ -413,6 +501,13 @@ nav{
 }
 
 @media (max-width: 768px) {
+=======
+@media (max-width: 768px) {
+  #header{
+    height: 60px;
+  }
+  
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
   nav{
     height: 60px;
   }  
@@ -459,7 +554,11 @@ nav{
         width: 480px;
         height: 932px;
         position: absolute;
+<<<<<<< HEAD
         top: 0;
+=======
+        top: 50px;
+>>>>>>> 93f27715375676eb1d17c3919d155f398abe8bc8
         z-index: 999;
         height: auto;
     }
