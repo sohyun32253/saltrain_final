@@ -2,7 +2,7 @@
     <v-app>
     <div id="login">
         <div class="login_cont">
-            <p class="dc_txt">SALTRAIN</p>
+            <h2><img src="@/assets/logo_black.svg" alt=""></h2>
             <div id="naver_id_login"></div>
             <form action="" name="Login">
                 <fieldset>
@@ -20,7 +20,7 @@
             <div class="service_wrap">
                 <p class="search_id"><router-link to="#none">아이디찾기</router-link></p>
                 <p class="search_pwd"><router-link to="#none">비밀번호찾기</router-link></p>
-                <p class="join_us"><router-link to="#none">회원가입</router-link></p>
+                <p class="join_us"><router-link to="Join">회원가입</router-link></p>
             </div>
 
             <router-link to="#none">
@@ -76,10 +76,10 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
     #login{
         background: #fff;
-        padding: 5rem 0;
+        padding: 4.5rem 0;
         box-sizing: border-box;
     }
     #login a{
@@ -91,17 +91,16 @@ export default {
         font-weight: bold;
     }
 
-    .dc_txt{font-size:  var(--h1-font-size); 
-        font-family: "urbane-condensed", sans-serif; 
-        font-weight: 700; font-style: normal;
-        margin-bottom: 2.5rem;
-       }
+    h2{
+        width: 190px; 
+        margin: 0 auto 2.5rem;}
+
+    h2 img{width: 190px;}
 
     .login_cont{
         width: 427px;
         margin: 0 auto;
         text-align: center;
-       /* padding: 5rem 0; */
     }
 
     #login legend,

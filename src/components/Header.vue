@@ -373,6 +373,10 @@ nav{
 
 
 @media (max-width: 768px) {
+  #header{
+    height: 60px;
+  }
+  
   nav{
     height: 60px;
   }  

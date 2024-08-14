@@ -214,7 +214,7 @@ const initIntersectionObservers = () => {
 initIntersectionObservers();
 </script>
         
-        <style>
+        <style scoped>
         /* animation 효과 */
         
         /* 초기 상태 */
@@ -331,6 +331,10 @@ initIntersectionObservers();
         
         .line_h{
             line-height: 1.5;
+        }
+
+        .dc_txt{
+            font-size: 40px; font-family: "urbane-condensed", sans-serif; font-weight: 700; font-style: normal;
         }
         
         /* about_goal */
