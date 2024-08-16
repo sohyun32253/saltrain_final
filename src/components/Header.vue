@@ -86,7 +86,12 @@
         </div>  
     </div>
 </div>
-
+<!-- 탑버튼 -->
+    <div class="top_btn">
+        <button @click="goTop()">
+            <v-icon>mdi-eject</v-icon>
+        </button>
+    </div>
 </template>
     
 <script setup>
@@ -194,8 +199,28 @@ onUnmounted(() => {
   document.removeEventListener('mousedown', handleClickOutside);
 });
   
-</script>
 
+</script>
+<script>
+  export default {
+      data() {
+          return {
+          goTopBtnShow: this.goTopBtnShow
+          };
+      },
+      methods: {
+          handleScroll(){
+              this.goTopBtnShow = window.scrollY > 400;
+          },
+          goTop() {
+              window.scrollTo({top: 0, behavior: 'smooth'});
+          }
+      },
+      mounted() {
+          window.addEventListener("scroll", this.handleScroll); 
+      }
+  };
+</script>
 <style scoped>
 .v-main{
   height: 0;
@@ -371,7 +396,18 @@ nav{
     cursor: pointer;
   }
 
-
+/* 탑버튼 */
+.top_btn button{
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    padding: 20px;
+    background-color: #1A51E6;
+    font-size: 16px;
+    border-radius: 50%; 
+    color: #fff;
+    z-index: 1;
+}
 @media (max-width: 768px) {
   #header{
     height: 60px;
