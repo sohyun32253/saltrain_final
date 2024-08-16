@@ -48,6 +48,9 @@
 }
 
 /* products list */
+.products_list{
+    padding-bottom: var(--large-bottom);
+}
 .list_order{
     padding: 0 12px;
     margin-bottom: var(--xs-bottom);
