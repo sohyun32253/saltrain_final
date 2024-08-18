@@ -71,9 +71,8 @@
     .footer_wrap{
         width: 1280px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 80px 0 120px;
         box-sizing: border-box; 
-        
     }
 
     .footer_top{

@@ -3,7 +3,21 @@
     <div id="login">
         <div class="login_cont">
             <h2><img src="@/assets/logo_black.svg" alt=""></h2>
-            <div id="naver_id_login"></div>
+            <div id="naver_id_login" ></div>
+            <div v-on:click="GoogleLoginBtn" class="google-login-button">구글 OAuth2 연동</div>
+            <!-- 구글 로그인 버튼의 렌더링을 위한 요소 (보통 숨겨진 상태) -->
+            <div id="my-signin2" style="display: none"></div>
+
+            <a id="custom-login-btn" @click="kakaoLogin()">
+                <img
+                  src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg"
+                  width="222"
+                  alt="카카오 로그인 버튼"
+                />
+              </a>
+            
+          
+            
             <form action="" name="Login">
                 <fieldset>
                     <legend>login</legend>
@@ -51,32 +65,137 @@
 </template>
 
 <script>
-const clientId = "AOZ3oDU74MI5PFFryvoN";
 
-export default {
-  components: {},
+  
+
+
+  export default {
+ 
+    
+  name: "test",
   data() {
-    return {};
+    return {
+      googleAuth: null,  // 구글 인증 객체
+    };
+  },
+  methods: {
+    async loadGoogleApi() {
+      return new Promise((resolve, reject) => {
+        if (window.gapi) {
+          resolve(window.gapi);
+        } else {
+          const script = document.createElement('script');
+          script.src = "https://apis.google.com/js/platform.js";
+          script.onload = () => resolve(window.gapi);
+          script.onerror = reject;
+          document.head.appendChild(script);
+        }
+      });
+    },
+
+    async GoogleLoginBtn() {
+      try {
+        const gapi = await this.loadGoogleApi();
+        gapi.load('auth2', () => {
+          this.googleAuth = gapi.auth2.init({
+            client_id: '520215058556-7eimp4mca6r0rg6951ls3vu16k7bm1et.apps.googleusercontent.com',  // 실제 클라이언트 ID로 변경
+            scope: 'profile email',
+          });
+
+          this.googleAuth.then(() => {
+            gapi.signin2.render('my-signin2', {
+              scope: 'profile email',
+              width: 240,
+              height: 50,
+              longtitle: true,
+              theme: 'dark',
+              onsuccess: this.GoogleLoginSuccess,
+              onfailure: this.GoogleLoginFailure,
+            });
+          });
+        });
+      } catch (error) {
+        console.error('Google API initialization failed:', error);
+      }
+    },
+
+    GoogleLoginSuccess(googleUser) {
+      const googleEmail = googleUser.getBasicProfile().getEmail();
+      if (googleEmail !== 'undefined') {
+        console.log(googleEmail);
+        // 로그인 성공 처리
+      }
+    },
+    GoogleLoginFailure(error) {
+      console.log(error);
+      // 로그인 실패 처리
+    },
+    kakaoLogin() {
+      window.Kakao.Auth.login({
+        scope: "profile_image, account_email",
+        success: this.getKakaoAccount,
+      });
+    },
+    getKakaoAccount() {
+      window.Kakao.API.request({
+        url: "/v2/user/me",
+        success: (res) => {
+          const kakao_account = res.kakao_account;
+          const nickname = kakao_account.profile.nickname;
+          const email = kakao_account.email;
+          console.log("nickname", nickname);
+          console.log("email", email);
+          alert("로그인 성공!");
+        },
+        fail: (error) => {
+          console.log(error);
+        },
+      });
+    },
+    kakaoLogout() {
+      window.Kakao.Auth.logout((res) => {
+        console.log(res);
+      });
+    },
   },
   mounted() {
-    /*
+    this.GoogleLoginBtn();
+
+    // 네이버 로그인 설정
     this.naverLogin = new window.naver_id_login(
-      clientId,
-      "http://localhost:5173"  // 개발자센터에서 등록한 Callback URL
+      'qMTMh5NYx_jXBNHXdTZr',  // 실제 클라이언트 ID로 변경
+      "http://localhost:5173/Login"  // 개발자센터에서 등록한 Callback URL
     );
-    var state = this.naverLogin.getUniqState();
+
+    const state = this.naverLogin.getUniqState();
     this.naverLogin.setButton("white", 2, 40); // 버튼설정
-    this.naverLogin.setDomain("http://localhost:5173/login");
+    this.naverLogin.setDomain("http://localhost:5173/Login");
     this.naverLogin.setState(state);
     this.naverLogin.setPopup(); // 팝업 여부
-    this.naverLogin.init_naver_id_login();*/
-  },
-};
+    this.naverLogin.init_naver_id_login();
+  }, 
+
+  
+  };
+ 
 
 </script>
 
 
 <style scoped>
+.google-login-button {
+    background-color: #4285F4; /* 구글 파란색 */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+  }
+  
+  
+
     #login{
         background: #fff;
         padding: 4.5rem 0;
@@ -123,7 +242,7 @@ export default {
     .password{
         width: 427px;
         height: 40px;
-        margin-bottom: 5rem;
+        margin-bottom: 3.5rem;
         border: 1px solid #484848;
         padding-left: 6px;
     }
