@@ -1,5 +1,6 @@
-# Vue 3 + Vite
+# SALTRAIN PROJECT 
+개발기간 : 2024.07.18 ~ 2024.09
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+개발환경 : HTML, CSS, JAVASCRIPT, VUE3, VUETIFY, VUECLI, VITE
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+프로젝트 소개 : VUE를 활용한 솔트레인 사이트 리뉴얼, 
